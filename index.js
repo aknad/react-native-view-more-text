@@ -128,6 +128,13 @@ class ViewMoreText extends React.Component {
   render() {
     return (
       <View>
+        {this.state.opacity === 0 &&
+          <Text
+            style={this.props.textStyle}
+            numberOfLines={this.props.numberOfLines}
+          >
+            {this.props.children}
+          </Text>}
         <View onLayout={this.onLayout} style={this.getWrapperStyle()}>
           <Text
             style={this.props.textStyle}
